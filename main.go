@@ -59,7 +59,7 @@ func fractal(z complex128) complex128 { // this is the one used in the blog post
 }
 
 func filter(z complex128) complex128 {
-	return complex(imag(z) + imag(z), real(z) / real(z))
+	return complex(imag(z) + imag(z), real(z) / math.Abs(real(z)))
 }
 
 func spiral(z complex128) complex128 {
